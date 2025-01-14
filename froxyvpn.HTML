@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froxy VPN - Free Gaming VPN</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Froxy VPN</h1>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#servers">Servers</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Free VPN for Gamers</h2>
+            <p>Enhance your gaming experience with Froxy VPN. Low ping, fast speeds, and secure connections.</p>
+            <div class="search-bar">
+                <form id="searchForm" onsubmit="performSearch(event)">
+                    <input type="text" id="search" placeholder="Search the web with Froxy VPN..." required />
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <a href="#servers" class="btn">Get Started for Free</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Why Use Froxy VPN?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Low Ping</h3>
+                    <p>Minimize latency and enjoy a smooth gaming experience.</p>
+                </div>
+                <div class="feature">
+                    <h3>Free for All</h3>
+                    <p>Completely free to use with no hidden fees or trials.</p>
+                </div>
+                <div class="feature">
+                    <h3>Optimized for Gaming</h3>
+                    <p>Special servers for Roblox and other popular games.</p>
+                </div>
+                <div class="feature">
+                    <h3>Web-Based Access</h3>
+                    <p>No downloads required. Start using Froxy VPN directly in your browser.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servers">
+        <div class="container">
+            <h2>Our Gaming Servers</h2>
+            <p>Connect to any of our optimized servers for the best gaming experience:</p>
+            <ul class="server-list">
+                <li><strong>Roblox Server:</strong> Designed for seamless gameplay on Roblox.</li>
+                <li><strong>Global Gaming:</strong> Low-latency servers for worldwide gaming.</li>
+                <li><strong>US East:</strong> Perfect for players in North America.</li>
+                <li><strong>Europe Central:</strong> Great speeds for European gamers.</li>
+            </ul>
+            <a href="#" class="btn">Connect Now</a>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>Is Froxy VPN really free?</h3>
+                <p>Yes, Froxy VPN is completely free to use for all users, with no hidden fees.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I connect to a server?</h3>
+                <p>Simply click on the "Connect Now" button above and choose your server.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is Froxy VPN safe?</h3>
+                <p>Absolutely! We use secure encryption to protect your data and privacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Froxy VPN. All rights reserved. Built for gamers, by gamers.</p>
+        </div>
+    </footer>
+
+    <script>
+        function performSearch(event) {
+            event.preventDefault();
+            const query = document.getElementById('search').value;
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            iframe.style.width = '100%';
+            iframe.style.height = '90vh';
+            iframe.style.border = 'none';
+
+            // Clear the current content and replace it with the search results
+            const heroSection = document.getElementById('hero');
+            heroSection.innerHTML = '';
+            heroSection.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>
